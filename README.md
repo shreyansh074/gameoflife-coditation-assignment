@@ -1,12 +1,18 @@
+#gameoflife-coditation-assignment
+
 import java.util.*;
-public class Main
-{
+
+public class Main {
+
+
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);
+	
+		Scanner input = new Scanner(System.in);
 		System.out.println("Enter no. of row :");
 		int row=input.nextInt();
 		System.out.println("Enter no. of col :");
 		int col=input.nextInt();
+		System.out.println("Enter elements of grid. press 1 if cell is alive or press 0 if cell is dead");
 		int grid[][]=new int[row][col];
 		for(int i=0;i<row;i++){
 		for(int j=0;j<col;j++){
@@ -23,9 +29,14 @@ public class Main
 	    }
 	}
 }
+
+
 class GameOfLife{
+
     public void GoL(int[][] board) {
+    
 		for (int i = 0; i < board.length; i++) {
+		
 			for (int j = 0; j < board[0].length; j++) {
 				int count = 0;
 				if (i - 1 >= 0 && j - 1 >= 0 && Math.abs(board[i - 1][j - 1]) == 1) {
